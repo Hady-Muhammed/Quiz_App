@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quiz-app {
+    /* background-color: #f8f8f8; */
+    background: rgb(255,255,255);
+    background: linear-gradient(342deg, rgba(255,255,255,1) 30%, rgba(74,117,154,1) 100%);
+    padding: 2em;
+    width: 70%;
+}
+.quiz-info {
+    background-color: white;
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.answers-area {
+    margin-top: 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.answers-area .answer {
+    background-color: #607d8b;
+    padding: 1em;
+}
+.answers-area input + label {
+    cursor: pointer;
+    transition: .5s;
+}
+.answers-area input:checked + label{
+    color: white;
+}
+
+.submit-button {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: #2196f3;
+    padding: 1em;
+    border-radius: 4px;
+    color: white;
+    margin: 1em 0;
+    cursor: pointer;
+}
+.bullets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    align-items: center;
+}
+.bullets .spans {
+    display: flex;
+    flex: 1;
+}
+.bullets .spans span {
+    width: 20px;
+    height: 20px;
+    background-color: #DDD;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.bullets .spans .on {
+    background-color: #196eb4;
+}
+.countdown {
+    background-color: gainsboro;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.results span {
+    font-weight: bold;
+}
+.results span.good {
+    color: #009688;
+}
+.results span.bad {
+    color: #dc0a0a;
+}
+.results span.perfect {
+    color: #0075ff;
+}
+label {
+    margin-left: 0.5em;
+}
+@media (max-width: 860px) {
+    .bullets {
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 640px) {
+    .quiz-app {
+        width: 100%;
+    }
+}
